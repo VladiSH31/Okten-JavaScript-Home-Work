@@ -217,42 +217,49 @@ console.log(users[9].password);
 
 let week = [
     {
+        name: 'Monday',
         morningTemperature: 12,
         daytimeTemperature: 22,
         eveningTemperature: 18,
     },
 
     {
+        name: 'Tuesday',
         morningTemperature: 12,
         daytimeTemperature: 22,
         eveningTemperature: 18,
     },
 
     {
+        name: 'Wednesday',
         morningTemperature: 12,
         daytimeTemperature: 22,
         eveningTemperature: 18,
     },
 
     {
+        name: 'Thursday',
         morningTemperature: 12,
         daytimeTemperature: 22,
         eveningTemperature: 18,
     },
 
     {
+        name: 'Friday',
         morningTemperature: 12,
         daytimeTemperature: 22,
         eveningTemperature: 18,
     },
 
     {
+        name: 'Saturday',
         morningTemperature: 12,
         daytimeTemperature: 22,
         eveningTemperature: 18,
     },
 
     {
+        name: 'Sunday',
         morningTemperature: 12,
         daytimeTemperature: 22,
         eveningTemperature: 18,
