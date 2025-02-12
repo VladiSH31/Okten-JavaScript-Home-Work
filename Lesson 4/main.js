@@ -1,20 +1,29 @@
 // #I2XsG6f
 // - створити функцію яка обчислює та повертає площу прямокутника зі сторонами а і б
 
-function areaRectangle (a, b) {
+function calcAreaRectangle (a, b) {
     return a * b;
 }
 
-let r1 = areaRectangle(10, 20);
-console.log(r1);
+let areaRectangle = calcAreaRectangle(10, 20);
+console.log(areaRectangle);
 
 // #ETGAxbEn8l
 // - створити функцію яка обчислює та повертає площу кола з радіусом r
 
-function areaCircle (r) {
-    let s = Math.PI*Math.pow(r, 2);
-    return s;
+function calcAreaCircle (r) {
+    return Math.PI*Math.pow(r, 2);
 }
 
-let aC = areaCircle(5);
-console.log(aC);
+let areaCircle = calcAreaCircle(5);
+console.log(areaCircle);
+
+// #Mbiz5K4yFe7
+// - створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
+
+function calcCylinder(r, h) {
+    return 2*Math.PI*r*h;
+}
+
+let areaCylinder = calcCylinder(5, 7);
+console.log(areaCylinder);
