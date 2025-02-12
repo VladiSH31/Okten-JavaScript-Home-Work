@@ -1,5 +1,6 @@
 // #I2XsG6f
 // - створити функцію яка обчислює та повертає площу прямокутника зі сторонами а і б
+// noinspection LanguageDetectionInspection
 
 function calcAreaRectangle (a, b) {
     return a * b;
@@ -27,3 +28,67 @@ function calcCylinder(r, h) {
 
 let areaCylinder = calcCylinder(5, 7);
 console.log(areaCylinder);
+
+// #SIdMd0hQ
+// - створити функцію яка приймає масив та виводить кожен його елемент
+
+function listArr(array) {
+    for (let arrayElement of array) {
+        console.log(arrayElement);
+    }
+}
+
+let skills = ['html', 'css', 'javascript', 'java', 'python']
+listArr(skills);
+
+// #59g0IsA
+// - створити функцію яка створює параграф з текстом та виводить його через document.write. Текст задати через аргумент
+
+function textWrite (text) {
+    document.write(`<p>${text}</p>`);
+}
+
+textWrite(`Lorem ipsum dolor sit amet.`);
+
+// #hOL6126
+// - створити функцію яка створює ul з трьома елементами li та виводить його через document.write. Текст li задати через аргумент всім однаковий
+function liWrite (text) {
+    document.write(`
+    <ul>
+        <li>${text}</li>
+        <li>${text}</li>
+        <li>${text}</li>
+    </ul>
+`);
+}
+
+liWrite(`Lorem ipsum dolor sit amet.`);
+
+// #0Kxco1edSN
+// - створити функцію яка створює ul з  елементами li. Текст li задати через аргумент всім однаковий.
+// Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл) та виводить його через document.write
+// До перегляду розв'язку
+// function autoListWrite(text, valueLi) {
+//     <ul>
+//     for (let i = 0; i < ${valueLi}; i++) {
+//         <li>${text}</li>
+//     }
+//     </ul>
+// }
+//
+// autoListWrite('hello', 5);
+
+function autoLiWrite(text, counter) {
+    document.write('<ul>');
+        for (let i = 0; i < counter; i++) {
+            document.write(`<li>${text}</li>`);
+        }
+    document.write('</ul>');
+}
+
+autoLiWrite('hello', 5);
+
+// #gEFoxMMO
+// - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві),
+// та будує для них список (ul li) та виводить його через document.write
+
