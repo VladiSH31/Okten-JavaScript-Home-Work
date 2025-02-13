@@ -92,3 +92,16 @@ autoLiWrite('hello', 5);
 // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві),
 // та будує для них список (ul li) та виводить його через document.write
 
+function listArray(array) {
+
+    document.write('<ul>');
+    for (let Item of array) {
+            document.write(`<li>${Item}</li>`);
+    }
+    document.write('</ul>');
+}
+
+
+listArray(['html', 'css', 'javascript', 'java', 'python']);
+
+// Дивився розв'язок, невиходило.
