@@ -105,3 +105,62 @@ function listArray(array) {
 listArray(['html', 'css', 'javascript', 'java', 'python']);
 
 // Дивився розв'язок, невиходило.
+// #bovDJDTIjt
+// - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ.
+// Для кожного об'єкту окремий блок.
+
+function usersList(arrayUsers) {
+    for (let user of arrayUsers) {
+        for (let fieldName in user) {
+            document.write(`<div>${fieldName} ${user[fieldName]} </div>`)
+        }
+    }
+}
+
+let users = [
+    {id: 1, name: 'john', age: 32},
+    {id: 2, name: 'michel', age: 28},
+    {id: 3, name: 'elizabeth', age: 26},
+]
+
+usersList(users);
+
+// Передивився розв'язок,в мене трошки по іншому. ЧИ має місце такий код, чи буде він правильним?
+
+// #pghbnSB
+// - створити функцію яка повертає найменьше число з масиву
+// До перегляду розв'язку. Але виводило NaN.
+// function minNumber(arrNum) {
+//     return Math.min(+arrNum)
+// }
+// let minNum = minNumber([234, 252, 253, 23, 35, 67])
+// console.log(minNum);
+//
+//Після перегляду розв'язку розібрав/зрозумів .
+
+function minNumber(numbers) {
+    let min = numbers[0];
+    for (let number of numbers) {
+        if (number < min) {
+            min = number;
+        }
+    }
+    return min;
+}
+
+console.log(minNumber([43, 23, 98 , 11, 53, 4, 55, -1, 98]));
+
+// #EKRNVPM
+// - створити функцію sum(arr) яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад sum([1,2,10]) //->13
+
+function sum(arr) {
+    let sum =0;
+    for (let number of arr) {
+        sum += number;
+    }
+    return sum;
+}
+
+console.log(sum([1,2,10]));
+
+// Піддивися у гуглі розібрав-зрозумів та вирішив.
