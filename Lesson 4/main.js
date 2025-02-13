@@ -104,7 +104,7 @@ function listArray(array) {
 
 listArray(['html', 'css', 'javascript', 'java', 'python']);
 
-// Дивився розв'язок, невиходило.
+// Дивився розв'язок, бо невиходило.
 // #bovDJDTIjt
 // - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ.
 // Для кожного об'єкту окремий блок.
@@ -181,3 +181,22 @@ console.log(swap([11,22,33,44],0,1));
 
 // Дивився розв'зок розібрав і потім робив. Як йде заміна мені зрозуміло. Мені не зрозуміло як функція розуміє що і1 і і2 це індекси масива
 //  а не окремі аргумети якісь.
+
+// #mkGDenYnNjn
+// - Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)
+// Приклад exchange(10000,[{currency:'USD',value:25},{currency:'EUR',value:42}],'USD') // => 400
+
+arrCur = [{currency:'USD',value:25},{currency:'EUR',value:42}]
+
+function exchange(sumUAH, exchangeCurrency) {
+    if (exchangeCurrency === 'USD') {
+        return sumUAH / arrCur[0].value;
+    }
+    if (exchangeCurrency === 'EUR') {
+        return sumUAH / arrCur[1].value;
+    }
+
+}
+console.log(exchange(10000, 'USD'));
+
+// Розв'язок не дивився. Зробив сам але трошки по іншому, я так розумію що відрізняється від завдання, але функцію виконує
