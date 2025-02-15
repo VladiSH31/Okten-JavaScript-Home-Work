@@ -93,3 +93,19 @@ let listArrayObject = (arr) => {
 }
 
 listArrayObject(array);
+
+/* #pghbnSB
+- створити функцію яка повертає найменьше число з масиву */
+
+let minNumber = (numbers) => {
+    let min = numbers[0];
+    for (let number of numbers) {
+        if (number < min) {
+            min = number;
+        }
+    }
+    return min;
+}
+
+
+console.log(minNumber ([12, 99, 65, -9, 1]));
