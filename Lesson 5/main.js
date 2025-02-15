@@ -88,7 +88,7 @@ let array = [
 
 let listArrayObject = (arr) => {
     for (let arrElement of arr) {
-        document.write(`<li>${arrElement.id} ${arrElement.name} ${arrElement.age}</li>`)
+        document.write(`<div>${arrElement.id} ${arrElement.name} ${arrElement.age}</div>`)
     }
 }
 
