@@ -124,6 +124,19 @@ let sum = (arr) => {
 
 console.log(sum([1, 2, 10]));
 
+/* #kpsbSQCt2Lf
+- створити функцію swap(arr,index1,index2). Функція міняє місцями заняення у відаовідних індексах
+Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44] */
+
+let swap = (arr, i1, i2) => {
+    let temp = arr[i1];
+    arr[i1] = arr[i2];
+    arr[i2] = temp;
+
+    return arr;
+}
+
+console.log(swap([11, 22, 33, 44], 0, 1));
 
 
 
