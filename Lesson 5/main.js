@@ -11,3 +11,11 @@ console.log(calcAreaRectangle(12, 5));
 let calcAreaCircle = (r) => Math.PI*Math.pow(r, 2);
 
 console.log(calcAreaCircle(9));
+
+// #Mbiz5K4yFe7
+// - створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
+
+let calcAreaCylinder = (r, h) => 2 * Math.PI*r*h;
+
+
+console.log(calcAreaCylinder(22, 10));
