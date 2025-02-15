@@ -75,3 +75,21 @@ let listArrayCreat = (arr) => {
 }
 
 listArrayCreat([12, 34, true, 'hello']);
+
+/* #bovDJDTIjt
+- створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ.
+Для кожного об'єкту окремий блок. */
+
+let array = [
+    {id: 1, name: 'alic', age: 45},
+    {id: 2, name: 'malic', age: 35},
+    {id: 3, name: 'valic', age: 55}
+]
+
+let listArrayObject = (arr) => {
+    for (let arrElement of arr) {
+        document.write(`<li>${arrElement.id} ${arrElement.name} ${arrElement.age}</li>`)
+    }
+}
+
+listArrayObject(array);
