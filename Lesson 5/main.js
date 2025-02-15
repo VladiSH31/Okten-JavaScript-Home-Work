@@ -107,5 +107,23 @@ let minNumber = (numbers) => {
     return min;
 }
 
-
 console.log(minNumber ([12, 99, 65, -9, 1]));
+
+/* #EKRNVPM
+- створити функцію sum(arr)яка приймає масив чисел, сумує значення елементів масиву та повертає його.
+Приклад sum([1,2,10]) //->13 */
+
+let sum = (arr) => {
+
+    sum = 0;
+        for (let arrElements of arr) {
+            sum += arrElements;
+        }
+    return sum;
+}
+
+console.log(sum([1, 2, 10]));
+
+
+
+
