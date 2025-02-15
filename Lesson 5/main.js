@@ -62,3 +62,16 @@ let listCreat = (text, listValue) => {
 }
 
 listCreat (`Lorem ipsum dolor sit amet, consectetur.`, 9);
+
+/* #gEFoxMMO
+- створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список */
+
+let listArrayCreat = (arr) => {
+    document.write(`<ul>`);
+    for (let item of arr) {
+        document.write(`<li>${item}</li>`);
+    }
+    document.write(`</ul>`);
+}
+
+listArrayCreat([12, 34, true, 'hello']);
