@@ -123,3 +123,49 @@ let mapedCourses = coursesAndDurationArray.map(function (value, index) {
     }
 })
 console.log(mapedCourses);
+
+// #bolvdlhP
+// описати колоду карт (від 6 до туза без джокерів)
+
+//
+// {
+//     cardSuit: '', // 'spade', 'diamond','heart', 'clubs'
+//         value: '', // '6'-'10', 'ace','jack','queen','king'
+//     color:'', // 'red','black'
+// }
+// - знайти піковий туз
+// - всі шістки
+// - всі червоні карти
+// - всі буби
+// - всі трефи від 9 та більше
+
+let suits= ['spade', 'diamond','heart', 'club'];
+let values = ['6', '7', '8', '9', '10', 'jack', 'queen', 'king', 'ace'];
+
+let cards = [];
+
+for (let suit of suits) {
+    for (let value of values) {
+        let card = {cardSuit: suit, value: value};
+        if (suit === 'heart' || suit === 'diamond') {
+            card.color = 'red';
+        } else {
+            card.color = 'black';
+        }
+        cards.push(card);
+    }
+}
+console.log(cards);
+
+console.log(cards.find(card => card.cardSuit === 'spade' && card.value === 'ace'));
+
+console.log(cards.filter(card => card.value === '6'));
+
+console.log(cards.filter(card => card.color === 'red'));
+
+console.log(cards.filter(card => card.cardSuit === 'diamond'));
+
+console.log(cards.filter(card => card.cardSuit === 'club' && (card.value!=='6' && card.value!=='7' && card.value!=='8' && card.value!=='9')));
+
+// Дивився розв'язок при чому не один раз, бо в останньому таску в розв'язку було написано card.value!=='6' || card.value!=='7'
+// а треба було через && бо не працювало.
