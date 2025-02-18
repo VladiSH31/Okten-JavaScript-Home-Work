@@ -169,3 +169,34 @@ console.log(cards.filter(card => card.cardSuit === 'club' && (card.value!=='6' &
 
 // Дивився розв'язок при чому не один раз, бо в останньому таску в розв'язку було написано card.value!=='6' || card.value!=='7'
 // а треба було через && бо не працювало.
+
+// #EP5I1UUzAX
+// Взяти описану колоду карт, та за допомоги reduce упакувати всі карти по "мастях" в об'єкт
+// {
+//     spades:[],
+//         diamonds:[],
+//     hearts:[],
+//     clubs:[]
+// }
+
+let reduceCards = cards.reduce((accum, card) => {
+    switch (card.cardSuit) {
+        case 'spade':
+            accum.spades.push(card);
+            break;
+        case 'diamond':
+            accum.diamonds.push(card);
+            break;
+        case 'heart':
+            accum.hearts.push(card);
+            break;
+        case 'club':
+            accum.clubs.push(card);
+            break;
+    }
+    return accum
+}, {spades:[],diamonds:[],hearts:[],clubs:[]})
+
+console.log(reduceCards)
+
+//Дивився розв'язок
