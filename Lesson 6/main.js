@@ -31,3 +31,24 @@ let strUpper2  = 'JAVASCRIPT IS COOL';
 console.log(strUpper.toLowerCase());
 console.log(strUpper1.toLowerCase());
 console.log(strUpper2.toLowerCase());
+
+// #0b89BkYZwu
+// - Є "брудна" стрінга let str = ' dirty string   ' . Почистити її від зайвих пробілів.
+
+let strDirty = ' dirty string   ';
+console.log(strDirty.trim());
+
+// Підглядав у розв'язок.
+
+// #bfoJuse4ZzP
+// - Напишіть функцію stringToarray(str), яка перетворює рядок на масив слів.
+// let str = 'Ревуть воли як ясла повні';
+// let arr = stringToarray(str); ['Ревуть', 'воли', 'як', 'ясла', 'повні']
+
+let string = 'Ревуть воли як ясла повні';
+
+function stringToArray(str) {
+    return str.split(' ')
+}
+let arr = stringToArray(string);
+console.log(arr);
