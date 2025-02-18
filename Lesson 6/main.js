@@ -19,3 +19,15 @@ console.log(str2.length);
 console.log(str.toUpperCase());
 console.log(str1.toUpperCase());
 console.log(str2.toUpperCase());
+
+// #ClDsAm7xba7
+// - Перевести до нижнього регістру настипні стрінгові значення
+// 'HELLO WORLD', 'LOREM IPSUM', 'JAVASCRIPT IS COOL'
+
+let strUpper = 'HELLO WORLD';
+let strUpper1  = 'LOREM IPSUM';
+let strUpper2  = 'JAVASCRIPT IS COOL';
+
+console.log(strUpper.toLowerCase());
+console.log(strUpper1.toLowerCase());
+console.log(strUpper2.toLowerCase());
