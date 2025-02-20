@@ -202,3 +202,51 @@ Car.prototype.addDriver = function (newDriver) {
 
 car.addDriver({name: 'John', surname: 'Johnson', year: 1988});
 console.log(car);
+
+// #zg6Fifnqig
+// -створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити масив з 10 попелюшок.
+// Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
+// За допомоги циклу знайти яка попелюшка повинна бути з принцом.
+// Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
+
+class Cinderella {
+    constructor(name, age, footSize) {
+        this.name = name;
+        this.age = age;
+        this.footSize = footSize;
+    }
+}
+
+let cinderellas = [
+    new Cinderella('Anna', 20, 35),
+    new Cinderella('Olga', 22, 36),
+    new Cinderella('Tatyana', 21, 35),
+    new Cinderella('Milana', 33, 40),
+    new Cinderella('Victoria', 28, 38),
+    new Cinderella('Jessica', 25, 44),
+    new Cinderella('Lana', 22, 36),
+    new Cinderella('Svitlana', 25, 37),
+    new Cinderella('Natalia', 31, 39),
+    new Cinderella('Iryna', 30, 40),
+]
+
+class Prince {
+    constructor(name, age, shoeSize) {
+        this.name = name;
+        this.age = age;
+        this.shoeSize = shoeSize;
+    }
+}
+let cinderellasPrince = new Prince('John', 30, 38)
+
+for (const cinderella of cinderellas) {
+        if (cinderella.footSize === cinderellasPrince.shoeSize) {
+            console.log(cinderella);
+        }
+}
+
+cinderellas.find(value => {
+    if (value.footSize === cinderellasPrince.shoeSize) {
+        console.log(value)
+    }
+})
