@@ -250,3 +250,31 @@ cinderellas.find(value => {
         console.log(value)
     }
 })
+
+// #gsKLAsNWM
+// *Через Array.prototype. створити власний foreach, filter
+// Дивився одразу розв'язок і повторював
+
+Array.prototype.myForEach = function (callback) {
+    const yourArray = this;
+    for (const item of this) {
+        callback(item);
+    }
+}
+let arr = [1, 'John', 3, true]
+arr.myForEach((x) => console.log(x));
+
+// Зробив тільки до масиву попелюшок, відфільтрував попелюшок у яких розмір ноги більше 42.
+
+Array.prototype.myFilter = function (callback) {
+    let  filtredSize= [];
+    for (const item of this) {
+        if (item.footSize > 42) {
+            filtredSize.push(item)
+        }
+    }
+    return filtredSize;
+}
+
+let result = cinderellas.myFilter((cinderella) => console.log(cinderella));
+console.log(result);
