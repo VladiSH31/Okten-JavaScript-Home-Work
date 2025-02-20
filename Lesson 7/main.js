@@ -3,11 +3,11 @@
 // створити пустий масив, наповнити його 10 об'єктами new User(....)
 
 function User(id, name, surname, email, phone) {
-        this.id = id;
-        this.name = name;
-        this.surname = surname;
-        this.email = email;
-        this.phone = phone;
+    this.id = id;
+    this.name = name;
+    this.surname = surname;
+    this.email = email;
+    this.phone = phone;
 }
 
 let user1 = new User(1, 'Anton', 'Antonov', 'example@example.ua', '063111111');
@@ -44,7 +44,7 @@ console.log(users);
 
 let filtredUsers = [];
 for (let user of users) {
-    if (user.id % 2 ===0){
+    if (user.id % 2 === 0) {
         filtredUsers.push(user)
     }
 }
@@ -78,15 +78,82 @@ class Client {
 }
 
 let Clients = [
-    new Client(1, "anna", "white", "anna.white@yahoo.com", "+12-951-6093735", ['milk', 'bread']),
+    new Client(1, "anna", "white", "anna.white@yahoo.com", "+12-951-6093735", ['milk']),
     new Client(2, "james", "martin", "james.martin@example.com", "+82-815-3464090", ['tomato', 'bread']),
     new Client(3, "michael", "anderson", "michael.anderson@gmail.com", "+58-378-8078854", ['milk', 'cucumber']),
     new Client(4, "chris", "harris", "chris.harris@gmail.com", "+7-925-9911410", ['tomato', 'bread']),
     new Client(5, "james", "jackson", "james.jackson@example.com", "+30-122-7409500", ['milk', 'cucumber']),
-    new Client(6, "john", "martin", "john.martin@yahoo.com", "+48-875-2723929", ['bear', 'meat']),
+    new Client(6, "john", "martin", "john.martin@yahoo.com", "+48-875-2723929", ['beer']),
     new Client(7, "james", "johnson", "james.johnson@outlook.com", "+2-256-7693455", ['tomato', 'bread']),
-    new Client(8, "david", "brown", "david.brown@example.com", "+61-194-5675450", ['milk', 'meat']),
-    new Client(9, "anna", "martin", "anna.martin@gmail.com", "+88-626-7981931", ['tomato', 'cucumber']),
-    new Client(10, "emily", "smith", "emily.smith@example.com", "+46-534-6364785", ['bear', 'milk']),
+    new Client(8, "david", "brown", "david.brown@example.com", "+61-194-5675450", ['milk', 'meat', 'bread']),
+    new Client(9, "anna", "martin", "anna.martin@gmail.com", "+88-626-7981931", ['tomato', 'cucumber', 'bread', 'beer', 'milk']),
+    new Client(10, "emily", "smith", "emily.smith@example.com", "+46-534-6364785", ['beer', 'milk']),
 ]
 console.log(Clients);
+
+// #8abtVjRv
+// - Взяти масив (Client [] з попереднього завдання).Відсортувати його по кількості товарів в полі order по зростанню. (sort)
+
+let sortedClients = Clients.sort((a, b) => {
+    return b.order.length - a.order.length;
+});
+
+console.log(sortedClients);
+
+// #vV9a6584I5
+// - Створити функцію конструктор яка дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
+// -- drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`
+// -- info () - яка виводить всю інформацію про автомобіль в форматі `назва поля - значення поля`
+// -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
+// -- changeYear (newValue) - змінює рік випуску на значення newValue
+// -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
+
+class Car {
+    constructor(model, manufacturer, year, maxSpeed, engineCapacity) {
+        this.model = model;
+        this.manufacturer = manufacturer;
+        this.year = year;
+        this.maxSpeed = maxSpeed;
+        this.engineCapacity = engineCapacity;
+    };
+
+    drive() {
+        return `їдемо зі швидкістю ${this.maxSpeed} на годину`;
+    }
+    // Спочатку зробив так
+    // info() {
+    //     return `Модель - ${this.model}, Виробник - ${this.manufacturer}, Рік виробництва - ${this.year}, Максимальна швидкість - ${this.maxSpeed}, Об'єм двигуна - ${this.engineCapacity}`;
+    // }
+    // Після перегляду розв'язку
+    info() {
+        for (const carKey in this) {
+            console.log(carKey, this[carKey])
+        }
+    }
+}
+let car = new Car('Grande Punto', 'Fiat', 2011, 150, 1.4);
+console.log(car);
+console.log(car.drive());
+car.info();
+// -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
+Car.prototype.increaseMaxSpeed = function (addSpeed) {
+    this.maxSpeed = this.maxSpeed + addSpeed;
+}
+car.increaseMaxSpeed(30);
+console.log(car);
+// -- changeYear (newValue) - змінює рік випуску на значення newValue
+
+Car.prototype.changeYear = function (newValue) {
+    this.year = newValue;
+}
+
+car.changeYear(2020);
+console.log(car);
+
+// -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт ca
+Car.prototype.addDriver = function (newDriver) {
+    this.driver = newDriver;
+}
+
+car.addDriver({name: 'John', surname: 'Johnson', year: 1988});
+console.log(car);
