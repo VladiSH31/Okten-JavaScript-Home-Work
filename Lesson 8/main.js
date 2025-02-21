@@ -21,7 +21,10 @@ function copyObject(obj) {
 
 let user = {
     name: 'Oleg',
-    age: 12
+    age: 12,
+    foo() {
+        console.log(`My name ${name}`);
+    }
 }
 let user1 = {
     name: 'Mark',
@@ -29,5 +32,5 @@ let user1 = {
 }
 let user2 = undefined
 
-let copyUser = copyObject(user2);
+let copyUser = copyObject(user);
 console.log(copyUser);
